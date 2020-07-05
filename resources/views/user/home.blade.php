@@ -63,7 +63,6 @@
           </div>
         </div>
 
-        @foreach ($posts as $post)
         <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
           <div class="sidebar-box ftco-animate">
             <h3 class="sidebar-heading">Categories</h3>
@@ -77,6 +76,7 @@
               @endforeach
             </ul>
           </div>
+
           <div class="sidebar-box ftco-animate">
             <h3 class="sidebar-heading">Tag Cloud</h3>
             <ul class="tagcloud">
@@ -85,12 +85,13 @@
               @endforeach
             </ul>
           </div>
+
           <div class="sidebar-box ftco-animate">
-            <h3 class="sidebar-heading">Love book</h3>
+            <h3 class="sidebar-heading">Love Book</h3>
             <p>Cô nan</p>
           </div>
         </div>
-        @endforeach
+
       </div>
     </div>
   </section>
