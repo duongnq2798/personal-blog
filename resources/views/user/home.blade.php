@@ -13,7 +13,7 @@
                 <a
                   href=" {{ route('post', $post->slug) }}"
                   class="img img-2"
-                  style="background-image: url(user/images/js.png);"
+                  style="background-image: url({{Storage::disk('local')->url($post->image)}});"
                 ></a>
                 <div class="text text-2 pl-md-4">
                   <h3 class="mb-2">
@@ -29,7 +29,7 @@
                       </span>
                       @foreach ($post->categories as $category)
                       <span>
-                        <a href="/">
+                        <a href="{{ route('category',['category'=> $category->slug])}}">
                           <i class="icon-folder-o mr-2"></i>
                           {{$category->name}}
                         </a>
@@ -62,40 +62,35 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 sidebar ftco-animate bg-light pt-5">
-          
+
+        @foreach ($posts as $post)
+        <div class="col-lg-4 sidebar ftco-animate bg-light pt-5">
           <div class="sidebar-box ftco-animate">
             <h3 class="sidebar-heading">Categories</h3>
             <ul class="categories">
               @foreach ($post->categories as $category)
               <li>
-                <a href="#">
+              <a href=" {{ route('category',['category'=> $category->slug])}} ">
                   {{ $category->name }}
                 </a>
               </li>
               @endforeach
             </ul>
           </div>
-
           <div class="sidebar-box ftco-animate">
             <h3 class="sidebar-heading">Tag Cloud</h3>
             <ul class="tagcloud">
               @foreach ($post->tags as $tag)
-                <a href="#" class="tag-cloud-link">{{ $tag->name }}</a>
+                <a href="{{ route('tag',$tag->slug) }}" class="tag-cloud-link">{{ $tag->name}}</a>
               @endforeach
             </ul>
           </div>
-
-   
-
           <div class="sidebar-box ftco-animate">
-            <h3 class="sidebar-heading">Love Book</h3>
-            <p>
-              "Không phải chưa đủ năng lực - Mà là chưa đủ kiên định"
-            </p>
+            <h3 class="sidebar-heading">Love book</h3>
+            <p>Cô nan</p>
           </div>
         </div>
-        <!-- END COL -->
+        @endforeach
       </div>
     </div>
   </section>

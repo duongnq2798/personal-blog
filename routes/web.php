@@ -9,6 +9,10 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'HomeController@index');
     // Post Routes
     Route::get('/post/{post}', 'PostController@index')->name('post');
+    // Tag
+    Route::get('post/tag/{tag}', 'HomeController@tag')->name('tag');
+    // Category
+    Route::get('post/category/{category}', 'HomeController@category')->name('category');
     // About Routes
     Route::get('/about', 'AboutController@index');
     // Contact Routes

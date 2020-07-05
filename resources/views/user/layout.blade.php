@@ -169,17 +169,13 @@
       </svg>
     </div>
 
-    <script>
-      src
-    </script>
-
     <script src="/user/js/configfrism.js"></script>
     <script src="/user/js/prism.js"></script>
     <script src="/user/js/jquery.min.js"></script>
     <script src="/user/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="/user/js/popper.min.js"></script>
     <script src="/user/js/bootstrap.min.js"></script>
-    <script src="/ser/js/jquery.easing.1.3.js"></script>
+    {{-- <script src="/ser/js/jquery.easing.1.3.js"></script> --}}
     <script src="/user/js/jquery.waypoints.min.js"></script>
     <script src="/user/js/jquery.stellar.min.js"></script>
     <script src="/user/js/owl.carousel.min.js"></script>

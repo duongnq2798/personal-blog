@@ -16,7 +16,7 @@
         @endif
         <!-- /.card-header -->
         <!-- form start -->
-      <form method="POST" action="{{ route('post.update', $post->id) }}" >
+      <form method="POST" action="{{ route('post.update', $post->id) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
           <div class="card-body">
@@ -38,9 +38,6 @@
                 <div class="custom-file">
                   <input name="image" type="file" class="custom-file-input" id="exampleInputFile" value="">
                   <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text">Upload</span>
                 </div>
               </div>
             </div>

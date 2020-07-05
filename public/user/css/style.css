@@ -12137,8 +12137,8 @@ textarea.form-control {
 .iconskill a {
   display: inline-block;
   padding: 4px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15);
-  border-radius: 6%;
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.15); */
+  border-radius: 50%;
 }
 
 .iconskill a img {
